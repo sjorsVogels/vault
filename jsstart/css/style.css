@@ -1,0 +1,52 @@
+#incorrect{
+    width: 150px;
+    height:25px ;
+    background-color: red;
+    float: left;	
+}
+#correct{
+    width: 150px;
+    height:25px ;
+    background-color: green;
+    float: left;
+    
+}
+
+#codecontainer{
+    height: 200px;
+    width: 300px;
+    background-color: #c11577;
+    font-size: 60px;
+    text-align: center;
+    color: #fff;
+    font-family: monospace;
+    padding-top: 100px;
+    box-shadow: 10px 10px #000000;
+}
+body{
+    background-color: cadetblue;
+}
+#codeInput button{
+    height: 60px;
+    width: 60px;
+    margin: 15px;
+    font-family: monospace;
+    background-color: brown;
+    border: 
+}
+#codeInput{
+    background-color: #c11577;
+    width: 300px;
+    height: 100px;
+    box-shadow: 10px 10px;
+}
+#answer{
+    background-color:#c11577;
+    height: 60px;
+    width: 300px;
+    box-shadow: 10px 10px #000000;
+    font-family: monospace;
+    font-size: 60px;
+    text-align: center;
+    color: #fff;
+}
