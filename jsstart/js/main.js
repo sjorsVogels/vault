@@ -3,6 +3,8 @@ var clickCounter = 0;
 var numberOne=0;
 var numberTwo=0;
 var numberThree=0;
+var win=0;
+var incorrect=0;
 
 function getNumber(clickedButton){
 
@@ -19,20 +21,25 @@ function getNumber(clickedButton){
         }else{
             numberThree = clickedButton.value;
         }
-    if(clickCounter==3   ){
+    if(clickCounter==3 ){
         document.getElementById("buttonOne").disabled = true;
         document.getElementById("buttonTwo").disabled = true;
         document.getElementById("buttonThree").disabled = true;
         
         if(numberOne==3 && numberTwo==3&& numberThree==1){
-            answer.innerHTML= "correct";        
+            answer.innerHTML= "correct";
+           
+            win++;
+            correctCounter.innerHTML = win;
+
+            var audio = new Audio('sounds/winSound.mp3');
+            audio.play();        
       
                     var correct = document.getElementById("correct");
                     var intervalTimer = 0;
 
                 var blink = setInterval(function() {
-            
-            		
+                        		
             intervalTimer++;
         
             //method to show div on and off
@@ -53,13 +60,21 @@ function getNumber(clickedButton){
                 document.getElementById("buttonThree").disabled = false;
                 answer.innerHTML= ""; 
                 codecontainer.innerHTML="";
-                    
+                clickCounter = "";
+                numberOne="";
+                numberTwo="";
+                numberThree=""; 
             }
         
         }, 500);
         }
         else{
             answer.innerHTML= "incorrect";
+            incorrect++;
+            incorrectCounter.innerHTML=incorrect;
+
+            var audio = new Audio('sounds/loseSound.mp3');
+            audio.play();
          
             var correct = document.getElementById("incorrect");
             var intervalTimer = 0;
